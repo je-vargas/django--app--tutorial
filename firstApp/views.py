@@ -15,3 +15,12 @@ def hello_there(request, name):
         "date": datetime.now()
     }
     )
+
+def home(request):
+    return render(request, "firstApp/home.html")
+
+def about(request):
+    return render(request, "firstApp/about.html")
+
+def contact(request):
+    return render(request, "firstApp/contact.html")
