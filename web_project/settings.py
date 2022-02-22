@@ -24,6 +24,7 @@ SECRET_KEY = 'django-insecure-o87exx*sq8-*pbd9*vpzvc3$35j#8*u7=4zbx+0#&8oy*^xq7o
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -55,8 +56,8 @@ ROOT_URLCONF = 'web_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': ["./firstApp/templates/"],
+        'APP_DIRS': False,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
