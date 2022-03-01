@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.views.generic import RedirectView
 
 urlpatterns = [
     path("", include("firstApp.urls")),
     path('admin/', admin.site.urls),
+    path('favicon.ico', RedirectView.as_view(url='/static/favicon.ico')) #: using this line to stop favicon error
 ]
 
 urlpatterns += staticfiles_urlpatterns()

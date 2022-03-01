@@ -9,7 +9,3 @@ class LogMessage(models.Model):
     def __str__(self):
         date = timezone.localtime(self.log_date)
         return f"'{self.message}' logged on {date.strftime('%A, %d, %B, %Y at %X')}"
-
-   
-
-# Create your models here.
